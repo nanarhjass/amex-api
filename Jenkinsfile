@@ -17,7 +17,7 @@ pipeline {
      choice(name: 'TARGET_ENV', choices: ['UAT', 'SIT', 'STAGING'], description: 'Pick something')
     }
     triggers {
-         pollSCM('*/5 * * * *')
+       
     }
     stages {
         stage('Checkout SCM') {
