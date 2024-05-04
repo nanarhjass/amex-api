@@ -11,7 +11,7 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '3')) 
         disableConcurrentBuilds()
-        quietPeriod(30)
+        quietPeriod(5)
     }
     parameters {
      choice(name: 'TARGET_ENV', choices: ['UAT', 'SIT', 'STAGING'], description: 'Pick something')
@@ -23,7 +23,7 @@ pipeline {
         stage('Checkout SCM') {
             steps {
                 checkout scm
-                sh 'echo ${env.CHEIF_AUTHOR}'
+                sh "echo $CHEIF_AUTHOR"
             }
         }
         stage('Compile') {
