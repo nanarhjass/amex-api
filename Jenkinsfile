@@ -16,9 +16,7 @@ pipeline {
     parameters {
      choice(name: 'TARGET_ENV', choices: ['UAT', 'SIT', 'STAGING'], description: 'Pick something')
     }
-    triggers {
-       
-    }
+ 
     stages {
         stage('Checkout SCM') {
             steps {
