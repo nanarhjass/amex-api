@@ -42,4 +42,9 @@ pipeline {
         }
         
     }
+    post {
+        always {
+            emailext attachLog: true, body: 'Hello ', subject: "BUIILD STATAUS $JOB_NAME", to: 'mukunjshop@gmail.com, atin@pragra.io'
+        }
+    }
 }
