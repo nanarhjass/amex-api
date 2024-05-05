@@ -31,7 +31,10 @@ pipeline {
         }
         stage('Code Scan') {
             steps {
-                sh 'mvn sonar:sonar'
+                withSonarQubeEnv('pragra-sonar') {
+                     sh 'mvn sonar:sonar'
+                }
+               
             }
         }
          stage('Test') {
