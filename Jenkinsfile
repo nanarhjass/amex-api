@@ -32,7 +32,7 @@ pipeline {
         stage('Code Scan') {
             steps {
                 withSonarQubeEnv('pragra-sonar') {
-                     sh 'mvn sonar:sonar'
+                     sh 'mvn -Dproject.settings=./sonar.properties sonar:sonar'
                 }
                
             }
