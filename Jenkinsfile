@@ -32,7 +32,7 @@ pipeline {
         stage('Code Scan') {
             steps {
                 withSonarQubeEnv('pragra-sonar') {
-                    sh 'mvn  -Dsonar.projectKey=atinsingh_amex-api  org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+                    sh 'mvn  -Dsonar.projectKey=pragra-ca_amex-api org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
                 }
                
             }
