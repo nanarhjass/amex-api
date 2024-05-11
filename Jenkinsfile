@@ -51,11 +51,8 @@ pipeline {
         
     }
     post {
-        always {
-            emailext attachLog: true, body: 'Hello ', subject: "BUIILD STATAUS $JOB_NAME", to: 'mukunjshop@gmail.com, atin@pragra.io'
-        }
-        success {
-            mail  body: 'Hello from Jenkins', from: 'jenkins@pragra.io', subject: 'BUIILD SUCCESS FULL $JOB_NAME', to: 'atin@pragra.io, mukunjshop@gmail.com'
-        }
+       always {
+           sh 'echo Completed'
+       }
     }
 }
