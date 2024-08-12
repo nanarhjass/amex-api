@@ -32,7 +32,7 @@ pipeline {
         stage('Code Scan') {
             steps {
                 withSonarQubeEnv('sonar') {
-                    sh 'mvn  -Dsonar.projectKey=nanarhjass_amex-api -Dsonar.organization=nanarhjass org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+                    sh 'mvn  -Dsonar.projectKey=nanarhjass_amex-api -Dsonar.organization=nanarhjass org.sonarsource.scanner.maven:sonar-maven-plugin:6.1.0.4477:sonar'
                 }
                
             }
