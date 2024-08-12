@@ -33,7 +33,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonar') {
                     sh 'mvn  -Dsonar.projectKey=nanarhjass_amex-api -Dsonar.organization=nanarhjass sonar:sonar'
-              }
+              
                 }
                
             }
