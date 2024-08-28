@@ -32,8 +32,8 @@ pipeline {
         stage('Code Scan') {
             steps {
                 withSonarQubeEnv('sonar') {
-                    sh 'mvn  -Dsonar.projectKey=jassproject -Dsonar.organization=AAdministrator
- sonar:sonar'
+                    sh "mvn  -Dsonar.projectKey=jassproject -Dsonar.organization=AAdministrator
+ sonar:sonar"
               
                 }
                
